@@ -163,23 +163,23 @@ main {
 }
 
 .hero-subtitle {
-  position: relative;
+  position: absolute;
+  bottom: 3rem;
+  left: 0;
+  right: 0;
   z-index: 1;
   display: flex;
   justify-content: space-between;
-  width: 100%;
-  max-width: 900px;
-  margin: 2rem auto 0;
-  padding: 0 2rem;
-  font-size: clamp(1rem, 2.5vw, 1.6rem);
-  font-weight: 600;
-  letter-spacing: 0.2em;
+  padding: 0 4rem;
+  font-size: clamp(0.8rem, 1.5vw, 1.1rem);
+  font-weight: 500;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--white);
+  color: rgba(255,255,255,0.85);
 }
 
-.sub-left, .sub-right {
-  text-shadow: 0 0 40px rgba(26, 95, 255, 0.2);
+@media (max-width: 768px) {
+  .hero-subtitle { padding: 0 1.5rem; }
 }
 
 /* === Section Headings === */
