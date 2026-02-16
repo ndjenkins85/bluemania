@@ -115,7 +115,7 @@
     currentTrackIdx = idx;
 
     audio.src = track.src;
-    audio.play();
+    audio.play().catch(() => {});
     isPlaying = true;
     playerToggle.textContent = '⏸';
     player.style.display = 'flex';
@@ -133,7 +133,7 @@
   playerToggle.addEventListener('click', () => {
     if (!audio.src) return;
     if (isPlaying) { audio.pause(); playerToggle.textContent = '▶'; }
-    else { audio.play(); playerToggle.textContent = '⏸'; }
+    else { audio.play().catch(() => {}); playerToggle.textContent = '⏸'; }
     isPlaying = !isPlaying;
   });
 
