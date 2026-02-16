@@ -165,12 +165,21 @@ main {
 .hero-subtitle {
   position: relative;
   z-index: 1;
-  font-size: 0.75rem;
-  color: var(--text-dim);
-  letter-spacing: 0.3em;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 900px;
+  margin: 2rem auto 0;
+  padding: 0 2rem;
+  font-size: clamp(1rem, 2.5vw, 1.6rem);
+  font-weight: 600;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  margin-top: 1.5rem;
-  font-weight: 300;
+  color: var(--white);
+}
+
+.sub-left, .sub-right {
+  text-shadow: 0 0 40px rgba(26, 95, 255, 0.2);
 }
 
 /* === Section Headings === */
