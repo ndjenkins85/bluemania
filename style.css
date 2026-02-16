@@ -110,8 +110,8 @@ main {
   width: 50%;
   height: 100%;
   background: url('art/bg-skull.jpg') left center/cover no-repeat;
-  opacity: 0.5;
-  filter: saturate(0.3) brightness(0.7);
+  opacity: 0.65;
+  filter: saturate(0.35) brightness(0.8);
   mask-image: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 60%, rgba(0,0,0,0) 100%);
   -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 60%, rgba(0,0,0,0) 100%);
 }
@@ -124,8 +124,8 @@ main {
   width: 50%;
   height: 100%;
   background: url('art/bg-deer.jpg') right center/cover no-repeat;
-  opacity: 0.5;
-  filter: saturate(0.4) brightness(0.7);
+  opacity: 0.65;
+  filter: saturate(0.45) brightness(0.8);
   mask-image: linear-gradient(to left, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 60%, rgba(0,0,0,0) 100%);
   -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 60%, rgba(0,0,0,0) 100%);
 }
@@ -136,9 +136,41 @@ main {
   font-size: clamp(2.5rem, 8vw, 5.5rem);
   font-weight: 700;
   letter-spacing: 0.25em;
-  color: var(--white);
-  text-shadow: 0 0 120px rgba(26, 95, 255, 0.4), 0 0 240px rgba(26, 95, 255, 0.15), 0 2px 40px rgba(0,0,0,0.8);
   line-height: 1;
+  background: linear-gradient(
+    90deg,
+    rgba(255,255,255,0.6) 0%,
+    rgba(255,255,255,1) 15%,
+    rgba(180,200,230,0.7) 30%,
+    rgba(255,255,255,1) 45%,
+    rgba(160,190,220,0.5) 60%,
+    rgba(255,255,255,0.9) 75%,
+    rgba(200,210,230,0.6) 90%,
+    rgba(255,255,255,1) 100%
+  );
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: smoke 8s ease-in-out infinite;
+  filter: drop-shadow(0 0 80px rgba(26, 95, 255, 0.3)) drop-shadow(0 0 160px rgba(26, 95, 255, 0.1));
+}
+
+@keyframes smoke {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.hero-subtitle {
+  position: relative;
+  z-index: 1;
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  margin-top: 1.5rem;
+  font-weight: 300;
 }
 
 /* === Section Headings === */
