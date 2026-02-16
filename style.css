@@ -74,25 +74,7 @@ header, main, footer {
 }
 
 header {
-  padding: 2rem 3rem;
-  border-bottom: 1px solid var(--border);
-}
-
-.logo { display: flex; align-items: baseline; gap: 1rem; }
-
-.logo-text {
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 0.3em;
-  color: var(--blue-bright);
-  text-transform: uppercase;
-}
-
-.logo-sub {
-  font-size: 0.7rem;
-  color: var(--text-dim);
-  letter-spacing: 0.1em;
-  font-weight: 300;
+  display: none;
 }
 
 main {
@@ -104,49 +86,36 @@ main {
 /* === Hero === */
 
 .hero {
-  padding: 8rem 0 6rem;
+  padding: 10rem 0 8rem;
   text-align: center;
   position: relative;
   overflow: hidden;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.hero::before {
-  content: '';
+.hero-bg {
   position: absolute;
-  left: -10%;
-  top: -10%;
-  width: 50%;
-  height: 120%;
-  background: url('art/bg-skull.jpg') center/cover no-repeat;
-  opacity: 0.25;
-  mask-image: linear-gradient(to right, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 100%);
-  -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 100%);
+  inset: 0;
+  background: url('art/bg-skull.jpg') left center/auto 100% no-repeat;
+  opacity: 0.35;
+  filter: saturate(0.3) brightness(0.6);
+  mask-image: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 40%, rgba(0,0,0,0) 70%);
+  -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 40%, rgba(0,0,0,0) 70%);
   pointer-events: none;
-  z-index: 0;
-}
-
-.hero h1, .hero .tagline {
-  position: relative;
-  z-index: 1;
 }
 
 .hero h1 {
-  font-size: clamp(3rem, 10vw, 7rem);
+  position: relative;
+  z-index: 1;
+  font-size: clamp(4rem, 14vw, 10rem);
   font-weight: 700;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.2em;
   color: var(--white);
-  text-shadow: 0 0 80px rgba(26, 95, 255, 0.3), 0 0 160px rgba(26, 95, 255, 0.1);
-  margin-bottom: 1.5rem;
+  text-shadow: 0 0 120px rgba(26, 95, 255, 0.4), 0 0 240px rgba(26, 95, 255, 0.15), 0 2px 40px rgba(0,0,0,0.8);
   line-height: 1;
-}
-
-.tagline {
-  font-size: 1.1rem;
-  color: var(--text-dim);
-  font-weight: 300;
-  max-width: 500px;
-  margin: 0 auto;
-  line-height: 1.8;
 }
 
 /* === Section Headings === */
@@ -349,15 +318,15 @@ h2 {
 /* === About === */
 
 .about {
-  padding: 4rem 0;
+  padding: 4rem 0 2rem;
+  text-align: center;
 }
 
 .about p {
-  font-size: 0.95rem;
-  color: var(--text);
-  max-width: 600px;
-  margin-bottom: 1rem;
-  line-height: 1.8;
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  letter-spacing: 0.05em;
+  font-weight: 300;
 }
 
 /* === Footer === */
