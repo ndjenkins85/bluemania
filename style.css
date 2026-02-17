@@ -383,14 +383,47 @@ h2 {
 
 .about {
   padding: 4rem 0 2rem;
-  text-align: center;
+}
+
+.about-content {
+  max-width: 640px;
+  margin: 0 auto;
 }
 
 .about p {
-  font-size: 0.85rem;
-  color: var(--text-dim);
-  letter-spacing: 0.05em;
+  font-size: 0.9rem;
+  color: var(--text);
+  line-height: 1.8;
+  margin-bottom: 1.2rem;
   font-weight: 300;
+}
+
+.about p:first-child {
+  font-size: 1rem;
+  color: var(--text-bright);
+  font-weight: 400;
+}
+
+.about p:last-child {
+  color: var(--text-dim);
+  font-style: italic;
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+}
+
+.about a {
+  color: var(--blue-bright);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.about a:hover {
+  color: var(--blue-pale);
+}
+
+.about em {
+  color: var(--blue-pale);
+  font-style: italic;
 }
 
 /* === Footer === */
@@ -413,6 +446,7 @@ footer {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   transition: color 0.2s;
+  margin: 0 1rem;
 }
 
 .footer-links a:hover {
